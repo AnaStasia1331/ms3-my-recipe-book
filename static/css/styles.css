@@ -10860,6 +10860,14 @@ header.masthead .masthead-heading {
   padding: 4px 7px;
 }
 
+#cardIcons a {
+  color: #000;
+}
+
+#cardIcons a:hover {
+  color: #cca000;
+}
+
 .footer {
   /* background-color: #212529;
   color: #fff; */
