@@ -10779,7 +10779,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../img/header-bg.jpg");
+  background-image: url("../img/header/home-header-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -10848,6 +10848,7 @@ header.masthead .masthead-heading {
   text-align: center;
   background-color: #fff;
 }
+
 #courses .card .card-caption .card-caption-heading {
   font-size: 1.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -10865,12 +10866,40 @@ header.masthead .masthead-heading {
 }
 
 #cardIcons a:hover {
-  color: #cca000;
+  color: #FFB300;
+}
+
+/* Breakfast page */
+.breakfastPage header.masthead {
+  background-image: url("../img/header/breakfast-header-bg.jpg");
+}
+
+/* Lunch page */
+.lunchPage header.masthead {
+  background-image: url("../img/header/lunch-header-bg.jpg");
+}
+
+/* Dinner page */
+.dinnerPage header.masthead {
+  background-image: url("../img/header/dinner-header-bg.jpg");
+}
+
+/* Snacks page */
+.snacksPage header.masthead {
+  background-image: url("../img/header/snacks-header-bg.jpg");
+}
+
+/* Desserts page */
+.dessertsPage header.masthead {
+  background-image: url("../img/header/desserts-header-bg.jpg");
+}
+
+/* Other courses page */
+.otherCoursesPage header.masthead {
+  background-image: url("../img/header/others-header-bg.jpg");
 }
 
 .footer {
-  /* background-color: #212529;
-  color: #fff; */
   text-align: center;
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
