@@ -23,7 +23,7 @@ They need a simple way to write down new cooking recipes in an online recipe boo
 It provides an intuitive user interface for creation of new recipes. A recipe category can be assigned to a recipe that helps to search for it later, as each category lists all related recipes on a separate page. All recipes overview is also available to website users. They are able to view already existing recepies, modify and remove them.  
 
 ## Wireframes (to edit)
-The [wireframes]() were created using Balsamiq tool.
+The [wireframes](https://github.com/AnaStasia1331/ms3-my-recipe-book/tree/master/static/img/readme/my-recipe-book-wireframes.pdf) were created using Balsamiq tool.
 
 ## User Stories 
 As a website user, I want to:
