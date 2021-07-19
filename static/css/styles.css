@@ -10899,6 +10899,24 @@ header.masthead .masthead-heading {
   background-image: url("../img/header/others-header-bg.jpg");
 }
 
+/* Recipe Form */
+.form-group {
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-style: italic;
+}
+.form-group label{
+  margin: 15px 0px 3px 0px;
+}
+
+.form-control:focus, .form-select:focus {
+  box-shadow: 0 0 0 0.15rem rgb(255 200 0 / 25%)
+}
+
+.btn-lg, .btn-group-lg > .btn {
+  margin: 0.5rem;
+}
+
 .footer {
   text-align: center;
   font-size: 0.9rem;
