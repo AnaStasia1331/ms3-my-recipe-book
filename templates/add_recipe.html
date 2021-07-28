@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "form.html" %}
 
 {% block page_id %}
     id="addRecipePage"
@@ -10,85 +10,6 @@
     <li class="nav-item"><a class="nav-link" href="#">My Recipes</a></li>
 {% endblock %}
 
-{% block masthead_content %}
-    <div class="masthead-heading">Managing recipes couldn't be easier!</div>
-{% endblock %}
-
-{% block content %}
-    <!-- Add a new recipe form -->
-    <!-- ToDo: style labels,  -->
-    <!-- add space between fields,  -->
-    <!-- change textarea fields size, -->
-    <!-- add margin between Cancel and Save buttons, -->
-    <!-- check if I could reuse validation from the original template -->
-    <!-- implement redirection after clicking Cancel button -->
-    <section class="page-section bg-light" id="addRecipeForm">
-        <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Add a new recipe</h2>
-            </div>
-            <form id="addRecipeForm">
-                <div class="row align-items-stretch mb-5">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <!-- Name input-->
-                            <label for="name">Recipe Name</label>
-                            <input class="form-control" id="name" type="text" data-sb-validations="required" />
-                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                        </div>
-                        <div class="form-group">
-                            <!-- Course dropdown -->
-                            <label for="course">Courses</label>
-                            <select class="form-select" aria-label="Courses" id="course" name="course">
-                                <option disabled selected>Select a course</option>
-                                <option value="1">Breakfast</option>
-                                <option value="2">Lunch</option>
-                                <option value="3">Dinner</option>
-                                <option value="3">Dessert</option>
-                                <option value="4">Snack</option>
-                                <option value="5">Others</option>
-                            </select>
-                        </div>
-                        <div class="form-group form-group-textarea">
-                            <!-- Ingredients textarea -->
-                            <label for="ingredients">Ingredients</label>
-                            <textarea class="form-control" id="ingredients"></textarea>
-                        </div>
-                        <div class="form-group form-group-textarea">
-                            <!-- Steps textarea -->
-                            <label for="steps">Steps</label>
-                            <textarea class="form-control" id="steps"></textarea>
-                        </div>
-                        <div class="form-group mb-md-0">
-                            <!-- Preparation Time input-->
-                            <label for="time">Preparation Time</label>
-                            <input class="form-control" id="time" type="time" />
-                        </div>
-                    </div>
-                </div>
-                <!-- Submit success message-->
-                <!---->
-                <!-- This is what your users will see when the form-->
-                <!-- has successfully submitted-->
-                <!-- <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
-                    </div> -->
-                <!-- Submit error message-->
-                <!---->
-                <!-- This is what your users will see when there is-->
-                <!-- an error submitting the form-->
-                <!-- <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div> -->
-                <!-- Submit Button-->
-                <div class="text-center">
-                    <a href="#" class="btn btn-primary btn-lg text-uppercase">Cancel</a>
-                    <button class="btn btn-primary btn-lg text-uppercase" id="submitButton" type="submit">Save</button>
-                </div>
-            </form>
-        </div>
-    </section>
+{% block section_header %}
+    <h2 class="section-heading text-uppercase">Add a New Recipe</h2>
 {% endblock %}
