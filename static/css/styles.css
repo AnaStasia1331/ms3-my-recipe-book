@@ -10870,32 +10870,32 @@ header.masthead .masthead-heading {
 }
 
 /* Breakfast page */
-.breakfastPage header.masthead {
+#breakfastPage header.masthead {
   background-image: url("../img/header/breakfast-header-bg.jpg");
 }
 
 /* Lunch page */
-.lunchPage header.masthead {
+#lunchPage header.masthead {
   background-image: url("../img/header/lunch-header-bg.jpg");
 }
 
 /* Dinner page */
-.dinnerPage header.masthead {
+#dinnerPage header.masthead {
   background-image: url("../img/header/dinner-header-bg.jpg");
 }
 
 /* Snacks page */
-.snacksPage header.masthead {
+#snacksPage header.masthead {
   background-image: url("../img/header/snacks-header-bg.jpg");
 }
 
 /* Desserts page */
-.dessertsPage header.masthead {
+#dessertsPage header.masthead {
   background-image: url("../img/header/desserts-header-bg.jpg");
 }
 
 /* Other courses page */
-.otherCoursesPage header.masthead {
+#otherCoursesPage header.masthead {
   background-image: url("../img/header/others-header-bg.jpg");
 }
 

@@ -27,10 +27,15 @@ def add_recipe():
     return render_template("add_recipe.html")
 
 
-@app.route("/get_recipes")
+@app.route("/all_recipes")
 def get_recipes():
     recipes = mongo.db.recipes.find()
     return render_template("all_recipes.html", recipes=recipes)
+
+
+@app.route("/snacks")
+def get_course():
+    return render_template("snacks.html")
 
 
 if __name__ == "__main__":

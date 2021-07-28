@@ -1,163 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Allows create new recipes, search, edit and delete them." />
-        <title>My recipe book</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="../static/img/favicon.svg"/>
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../static/css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="../static/img/nav-logo.svg" alt="..." /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#addRecipe">Add a New Recipe</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">My Recipes</a></li>
-                    </ul>
-                </div>
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- Add New Recipe section-->
+    <section class="page-section" id="addRecipe">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Add a new recipe</h2>
+                <h3 class="section-subheading text-muted">Write up and store your cherished family recipes, add your
+                    favorite dish or the dessert recipe you created yourself.</h3>
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-square fa-stack-2x text-primary"></i>
+                    <i class="fas fa-pencil-alt fa-stack-1x fa-inverse"></i>
+                </span>
             </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container">
-                <div class="masthead-heading">Welcome To My Recipe Book!</div>
-                <div class="masthead-subheading text-light">Collect and organize your favorite recipes the way you want</div>
+        </div>
+    </section>
+    <!-- Courses grid-->
+    <section class="page-section bg-light" id="courses">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Courses</h2>
+                <h3 class="section-subheading text-muted">Browse by course to find a recipe you want to eat for
+                    breakfast, lunch or dinner.</h3>
             </div>
-        </header>
-        <!-- Add New Recipe section-->
-        <section class="page-section" id="addRecipe">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Add a new recipe</h2>
-                    <h3 class="section-subheading text-muted">Write up and store your cherished family recipes, add your favorite dish or the dessert recipe you created yourself.</h3>
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-square fa-stack-2x text-primary"></i>
-                        <i class="fas fa-pencil-alt fa-stack-1x fa-inverse"></i>
-                    </span>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Breakfast card-->
+                    <div class="card">
+                        <a class="card-link" href="breakfast.html">
+                            <div class="card-hover"></div>
+                            <img class="img-fluid" src="../static/img/courses/breakfast.jpg" alt="..." />
+                        </a>
+                        <div class="card-caption">
+                            <div class="card-caption-heading">Breakfast</div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <!-- Courses grid-->
-        <section class="page-section bg-light" id="courses">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Courses</h2>
-                    <h3 class="section-subheading text-muted">Browse by course to find a recipe you want to eat for breakfast, lunch or dinner.</h3>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Lunch card -->
+                    <div class="card">
+                        <a class="card-link" href="lunch.html">
+                            <div class="card-hover"></div>
+                            <img class="img-fluid" src="../static/img/courses/lunch.jpg" alt="..." />
+                        </a>
+                        <div class="card-caption">
+                            <div class="card-caption-heading">Lunch</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Breakfast card-->
-                        <div class="card">
-                            <a class="card-link" href="breakfast.html">
-                                <div class="card-hover"></div>
-                                <img class="img-fluid" src="../static/img/courses/breakfast.jpg" alt="..." />
-                            </a>
-                            <div class="card-caption">
-                                <div class="card-caption-heading">Breakfast</div>
-                            </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Dinner card-->
+                    <div class="card">
+                        <a class="card-link" href="dinner.html">
+                            <div class="card-hover"></div>
+                            <img class="img-fluid" src="../static/img/courses/dinner.jpg" alt="..." />
+                        </a>
+                        <div class="card-caption">
+                            <div class="card-caption-heading">Dinner</div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Lunch card -->
-                        <div class="card">
-                            <a class="card-link" href="lunch.html">
-                                <div class="card-hover"></div>
-                                <img class="img-fluid" src="../static/img/courses/lunch.jpg" alt="..." />
-                            </a>
-                            <div class="card-caption">
-                                <div class="card-caption-heading">Lunch</div>
-                            </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <!-- Snacks Card -->
+                    <div class="card">
+                        <a class="card-link" href="snacks.html">
+                            <div class="card-hover"></div>
+                            <img class="img-fluid" src="../static/img/courses/snack.jpg" alt="..." />
+                        </a>
+                        <div class="card-caption">
+                            <div class="card-caption-heading">Snacks</div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Dinner card-->
-                        <div class="card">
-                            <a class="card-link" href="dinner.html">
-                                <div class="card-hover"></div>
-                                <img class="img-fluid" src="../static/img/courses/dinner.jpg" alt="..." />
-                            </a>
-                            <div class="card-caption">
-                                <div class="card-caption-heading">Dinner</div>
-                            </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <!-- Desserts card -->
+                    <div class="card">
+                        <a class="card-link" href="desserts.html">
+                            <div class="card-hover"></div>
+                            <img class="img-fluid" src="../static/img/courses/dessert.jpg" alt="..." />
+                        </a>
+                        <div class="card-caption">
+                            <div class="card-caption-heading">Desserts</div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <!-- Snacks Card -->
-                        <div class="card">
-                            <a class="card-link" href="snacks.html">
-                                <div class="card-hover"></div>
-                                <img class="img-fluid" src="../static/img/courses/snack.jpg" alt="..." />
-                            </a>
-                            <div class="card-caption">
-                                <div class="card-caption-heading">Snacks</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <!-- Desserts card -->
-                        <div class="card">
-                            <a class="card-link" href="desserts.html">
-                                <div class="card-hover"></div>
-                                <img class="img-fluid" src="../static/img/courses/dessert.jpg" alt="..." />
-                            </a>
-                            <div class="card-caption">
-                                <div class="card-caption-heading">Desserts</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <!-- Others card -->
-                        <div class="card">
-                            <a class="card-link" href="other_courses.html">
-                                <div class="card-hover"></div>
-                                <img class="img-fluid" src="../static/img/courses/others.jpg" alt="..." />
-                            </a>
-                            <div class="card-caption">
-                                <div class="card-caption-heading">Others</div>
-                            </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Others card -->
+                    <div class="card">
+                        <a class="card-link" href="other_courses.html">
+                            <div class="card-hover"></div>
+                            <img class="img-fluid" src="../static/img/courses/others.jpg" alt="..." />
+                        </a>
+                        <div class="card-caption">
+                            <div class="card-caption-heading">Others</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Footer-->
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; My Recipe Book 2021</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a target="_blank" class="btn btn-dark btn-social mx-2" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                        <a target="_blank" class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                        <a target="_blank" class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="../static/js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
-</html>
+        </div>
+    </section>
+{% endblock %}
+
