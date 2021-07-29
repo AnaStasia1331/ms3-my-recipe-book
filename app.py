@@ -38,15 +38,15 @@ def view_recipe():
     return render_template("view_recipe.html")
 
 
-@app.route("/all_recipes")
+@app.route("/get_recipes")
 def get_recipes():
     recipes = mongo.db.recipes.find()
     return render_template("all_recipes.html", recipes=recipes)
 
 
-@app.route("/snacks")
-def get_course():
-    return render_template("snacks.html")
+@app.route("/course/<course>")
+def get_course(course):
+    return render_template("{}.html".format(course))
 
 
 if __name__ == "__main__":
