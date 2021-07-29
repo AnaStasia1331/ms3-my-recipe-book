@@ -5,11 +5,18 @@
 {% endblock %}
 
 {% block nav_items %}
-    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-    <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
-    <li class="nav-item"><a class="nav-link" href="#">My Recipes</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ url_for('get_homepage') }}">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ url_for('get_homepage') }}#courses">Courses</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{ url_for('get_recipes') }}#allRecipes">My Recipes</a></li>
 {% endblock %}
 
 {% block section_header %}
     <h2 class="section-heading text-uppercase">Add a New Recipe</h2>
+{% endblock %}
+
+{% block buttons %}
+<div class="text-center">
+    <a href="{{ url_for('get_homepage') }}" class="btn btn-primary btn-lg text-uppercase">Cancel</a>
+    <button class="btn btn-primary btn-lg text-uppercase" id="submitButton" type="submit">Save</button>
+</div>
 {% endblock %}

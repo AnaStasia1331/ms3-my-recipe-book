@@ -8,10 +8,12 @@
                 <h2 class="section-heading text-uppercase">Add a new recipe</h2>
                 <h3 class="section-subheading text-muted">Write up and store your cherished family recipes, add your
                     favorite dish or the dessert recipe you created yourself.</h3>
-                <span class="fa-stack fa-4x">
-                    <i class="fas fa-square fa-stack-2x text-primary"></i>
-                    <i class="fas fa-pencil-alt fa-stack-1x fa-inverse"></i>
-                </span>
+                <a href="{{ url_for('add_recipe') }}#recipeForm">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-square fa-stack-2x text-primary"></i>
+                        <i class="fas fa-pencil-alt fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
             </div>
         </div>
     </section>
@@ -27,7 +29,7 @@
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <!-- Breakfast card-->
                     <div class="card">
-                        <a class="card-link" href="breakfast.html">
+                        <a class="card-link" href="{{ url_for('get_course') }}">
                             <div class="card-hover"></div>
                             <img class="img-fluid" src="../static/img/courses/breakfast.jpg" alt="..." />
                         </a>

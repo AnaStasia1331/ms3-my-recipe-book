@@ -14,7 +14,7 @@
 
 {% block buttons %}
 <div class="text-center">
-    <a href="#" class="btn btn-primary btn-lg text-uppercase">Back</a>
+    <a href="{{ url_for('get_recipes') }}#allRecipes" class="btn btn-primary btn-lg text-uppercase">Back</a>
     <button class="btn btn-primary btn-lg text-uppercase" id="submitButton" type="submit">Edit</button>
 </div>
 {% endblock %}

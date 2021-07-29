@@ -13,7 +13,7 @@
             <div class="text-center">
                 {% block section_header %}<h2 class="section-heading text-uppercase">Title</h2>{% endblock %}
             </div>
-            <form>
+            <form id="recipeForm">
                 <div class="row align-items-stretch mb-5">
                     <div class="col-md-12">
                         {% block fieldset_element %}<fieldset>{% endblock %}
@@ -54,29 +54,7 @@
                         </fieldset>
                     </div>
                 </div>
-                <!-- Submit success message-->
-                <!---->
-                <!-- This is what your users will see when the form-->
-                <!-- has successfully submitted-->
-                <!-- <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
-                    </div> -->
-                <!-- Submit error message-->
-                <!---->
-                <!-- This is what your users will see when there is-->
-                <!-- an error submitting the form-->
-                <!-- <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div> -->
-                <!-- Submit Button-->
                 {% block buttons %}
-                <div class="text-center">
-                    <a href="#" class="btn btn-primary btn-lg text-uppercase">Cancel</a>
-                    <button class="btn btn-primary btn-lg text-uppercase" id="submitButton" type="submit">Save</button>
-                </div>
                 {% endblock %}
             </form>
         </div>
