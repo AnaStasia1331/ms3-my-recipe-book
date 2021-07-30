@@ -47,7 +47,7 @@
                 </div>
                 <!-- Back and Edit buttons-->
                 <div class="text-center">
-                    <a href="{{ url_for('get_recipes') }}#allRecipes" class="btn btn-primary btn-lg text-uppercase">Back</a>
+                    <a href="{{ request.headers.get('Referer') }}" class="btn btn-primary btn-lg text-uppercase">Back</a>
                     <button class="btn btn-primary btn-lg text-uppercase" id="editButton" type="submit">Edit</button>
                 </div>
             </form>

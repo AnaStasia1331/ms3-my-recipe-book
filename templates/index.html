@@ -41,7 +41,7 @@
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <!-- Lunch card -->
                     <div class="card">
-                        <a class="card-link" href="lunch.html">
+                        <a class="card-link" href="{{ url_for('get_course',course='lunch') }}">
                             <div class="card-hover"></div>
                             <img class="img-fluid" src="../static/img/courses/lunch.jpg" alt="..." />
                         </a>
@@ -53,7 +53,7 @@
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <!-- Dinner card-->
                     <div class="card">
-                        <a class="card-link" href="dinner.html">
+                        <a class="card-link" href="{{ url_for('get_course',course='dinner') }}">
                             <div class="card-hover"></div>
                             <img class="img-fluid" src="../static/img/courses/dinner.jpg" alt="..." />
                         </a>
@@ -65,7 +65,7 @@
                 <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
                     <!-- Snacks Card -->
                     <div class="card">
-                        <a class="card-link" href="snacks.html">
+                        <a class="card-link" href="{{ url_for('get_course',course='snacks') }}">
                             <div class="card-hover"></div>
                             <img class="img-fluid" src="../static/img/courses/snack.jpg" alt="..." />
                         </a>
@@ -77,7 +77,7 @@
                 <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
                     <!-- Desserts card -->
                     <div class="card">
-                        <a class="card-link" href="desserts.html">
+                        <a class="card-link" href="{{ url_for('get_course',course='desserts') }}">
                             <div class="card-hover"></div>
                             <img class="img-fluid" src="../static/img/courses/dessert.jpg" alt="..." />
                         </a>
@@ -89,7 +89,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <!-- Others card -->
                     <div class="card">
-                        <a class="card-link" href="other_courses.html">
+                        <a class="card-link" href="{{ url_for('get_course',course='other_courses') }}">
                             <div class="card-hover"></div>
                             <img class="img-fluid" src="../static/img/courses/others.jpg" alt="..." />
                         </a>

@@ -54,7 +54,7 @@
                 </div>
                 <!-- Save and Cancel buttons-->
                 <div class="text-center">
-                    <a href="{{ url_for('get_recipes') }}#allRecipes" class="btn btn-primary btn-lg text-uppercase">Cancel</a>
+                    <a href="{{ request.headers.get('Referer') }}" class="btn btn-primary btn-lg text-uppercase">Cancel</a>
                     <button class="btn btn-primary btn-lg text-uppercase" id="saveButton" type="submit">Save</button>
                 </div>
             </form>

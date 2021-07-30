@@ -66,13 +66,14 @@ def view_recipe(recipe_id):
 
 @app.route("/get_recipes")
 def get_recipes():
-    recipes = mongo.db.recipes.find()
+    recipes = list(mongo.db.recipes.find())
     return render_template("all_recipes.html", recipes=recipes)
 
 
 @app.route("/course/<course>")
 def get_course(course):
-    return render_template("{}.html".format(course))
+    recipes = list(mongo.db.recipes.find({"course_name": course.capitalize()}))
+    return render_template("{}.html".format(course), recipes=recipes)
 
 
 if __name__ == "__main__":
