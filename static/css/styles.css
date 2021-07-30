@@ -10869,6 +10869,10 @@ header.masthead .masthead-heading {
   color: #FFB300;
 }
 
+#confirmDeletionModal a {
+  color: #fff;
+}
+
 /* Breakfast page */
 #breakfastPage header.masthead {
   background-image: url("../img/header/breakfast-header-bg.jpg");
