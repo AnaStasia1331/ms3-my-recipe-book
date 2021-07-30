@@ -10917,6 +10917,12 @@ header.masthead .masthead-heading {
   margin: 0.5rem;
 }
 
+/* Recipe Cards */
+#recipeCards .row {
+  margin-top: 4rem;
+}
+
+/* Footer */
 .footer {
   text-align: center;
   font-size: 0.9rem;
