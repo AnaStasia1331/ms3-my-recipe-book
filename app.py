@@ -22,20 +22,46 @@ def get_homepage():
     return render_template("index.html")
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
-    return render_template("add_recipe.html")
+    if request.method == "POST":
+        recipe = {
+            "recipe_name": request.form.get("recipe_name"),
+            "course_name": request.form.get("course_name"),
+            "ingredients": request.form.get("ingredients"),
+            "steps": request.form.get("steps"),
+            "preparation_time": request.form.get("preparation_time")
+        }
+        mongo.db.recipes.insert_one(recipe)
+        return redirect(url_for("get_recipes", _anchor='allRecipes'))
+
+    courses = mongo.db.courses.find()
+    return render_template("add_recipe.html", courses=courses)
 
 
 
-@app.route("/edit_recipe")
-def edit_recipe():
-    return render_template("edit_recipe.html")
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    if request.method == "POST":
+        submit = {
+            "recipe_name": request.form.get("recipe_name"),
+            "course_name": request.form.get("course_name"),
+            "ingredients": request.form.get("ingredients"),
+            "steps": request.form.get("steps"),
+            "preparation_time": request.form.get("preparation_time")
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+        return redirect(url_for("get_recipes", _anchor='allRecipes'))
+
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    courses = mongo.db.courses.find()
+    return render_template("edit_recipe.html", recipe=recipe, courses=courses)
 
 
-@app.route("/view_recipe")
-def view_recipe():
-    return render_template("view_recipe.html")
+@app.route("/view_recipe/<recipe_id>")
+def view_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("view_recipe.html", recipe=recipe)
 
 
 @app.route("/get_recipes")
