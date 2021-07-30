@@ -64,10 +64,12 @@ def view_recipe(recipe_id):
     return render_template("view_recipe.html", recipe=recipe)
 
 
-@app.route("/delete_task/<recipe_id>")
+@app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    return redirect(url_for("get_recipes"))
+    # refer to https://stackoverflow.com/questions/28593235/get-referring-url-for-flask-request/28593313#28593313
+    referrer = request.headers.get("Referer")
+    return redirect(referrer)
 
 
 @app.route("/get_recipes")
