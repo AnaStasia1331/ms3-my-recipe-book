@@ -33,11 +33,10 @@ def add_recipe():
             "preparation_time": request.form.get("preparation_time")
         }
         mongo.db.recipes.insert_one(recipe)
-        return redirect(url_for("get_recipes", _anchor='allRecipes'))
+        return redirect(url_for("get_recipes", _anchor='recipeCards'))
 
     courses = mongo.db.courses.find()
     return render_template("add_recipe.html", courses=courses)
-
 
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
@@ -51,7 +50,7 @@ def edit_recipe(recipe_id):
             "preparation_time": request.form.get("preparation_time")
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
-        return redirect(url_for("get_recipes", _anchor='allRecipes'))
+        return redirect(url_for("get_recipes", _anchor='recipeCards'))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     courses = mongo.db.courses.find()
@@ -82,6 +81,12 @@ def get_recipes():
 def get_course(course):
     recipes = list(mongo.db.recipes.find({"course_name": course.capitalize()}))
     return render_template("{}.html".format(course), recipes=recipes)
+
+
+# https://flask.palletsprojects.com/en/2.0.x/quickstart/#redirects-and-errors
+@app.errorhandler(404)
+def not_found(e):
+    return render_template('404.html')
 
 
 if __name__ == "__main__":
