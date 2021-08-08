@@ -66,7 +66,7 @@ def view_recipe(recipe_id):
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    # refer to https://stackoverflow.com/questions/28593235/get-referring-url-for-flask-request/28593313#28593313
+    # source https://stackoverflow.com/questions/28593235/get-referring-url-for-flask-request/28593313#28593313
     referrer = request.headers.get("Referer")
     return redirect(referrer)
 
@@ -83,7 +83,7 @@ def get_course(course):
     return render_template("{}.html".format(course), recipes=recipes)
 
 
-# https://flask.palletsprojects.com/en/2.0.x/quickstart/#redirects-and-errors
+# source https://flask.palletsprojects.com/en/2.0.x/quickstart/#redirects-and-errors
 @app.errorhandler(404)
 def not_found(e):
     return render_template('404.html')
@@ -92,4 +92,4 @@ def not_found(e):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)

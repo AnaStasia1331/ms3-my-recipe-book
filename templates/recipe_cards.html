@@ -8,6 +8,7 @@
                 {% endblock %}
             </div>
             <div class="row">
+                {% if recipes|length > 0 %}
                 {% for recipe in recipes %}
                     <div class="col-lg-3 col-sm-6 mb-4">
                         <div class="card">
@@ -48,6 +49,11 @@
                         </div>
                     </div>
                 {% endfor %}
+                {% else %}
+                    <div class="col-12 text-center text-muted">
+                        <h5>No recipes have been added yet.</h5>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </section>
