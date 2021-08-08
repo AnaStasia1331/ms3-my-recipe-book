@@ -28,15 +28,18 @@ The [wireframes](https://github.com/AnaStasia1331/ms3-my-recipe-book/tree/master
 ## User Stories 
 As a website user, I want to:
 
-1. navigate throughout the website with intuitive web design;
-2. be able to create a new recipe.
-3. get confirmation my new recipe was saved successfully. 
-4. be able to find an existing recipe based on category/group it belongs to.
-5. be able to access all recipes in single place.
-6. view the details of an existing recipe.
-7. edit a recipe.
-8. delete a recipe.
-9. access the website from multiple devices of different sizes without major UI issues.
+1. be able to create a new recipe.
+2. be able to find an existing recipe based on category/group it belongs to.
+3. be able to access all recipes in a single place.
+4. view the details of an existing recipe.
+5. edit a recipe.
+6. delete a recipe.
+7. access the website from multiple devices of different sizes without major UI issues.
+
+## Nice-to-have features 
+
+1. Login functionality.
+2. Image upload for a specific recipe.
 
 # Technologies Used (to edit)
 
@@ -102,9 +105,61 @@ Google Chrome dev tool was used during development to make sure the website is r
 - Laptop HP ZBook 15 G3, 1920x1080-pixel screen resolution, Google Chrome browser.
 - Iphone XR with 1792 x 828-pixel screen resolution, Safari browser.
 
-## Testing User Stories from User Experience (UX) Section
+## Testing User Stories from User Experience (UX) Section (in progress)
 
-1. 
+ToDo: link tests to US
+1. Home page.  
+    * Expected: user clicks the nav and social media links from the Home page and is redirected to the right pages/sections.
+    * Testing:
+        * click on the Home nav item -> the Home page is refreshed;
+        * click on the logo -> the Home page is refreshed;
+        * click on the Add A New Recipe nav item -> Add A New Recipe form is opened with 2 buttons: Cancel and Save;
+        * click on the Courses nav item -> the Courses section is opened with multiple courses types;
+        * click on the My Recipes nav item -> All Recipes page is opened either with recipe cards or 'No recipes have been added yet' text;
+        * click on the Add A New Recipe pencil icon -> Add A New Recipe form is opened with 2 buttons: Cancel and Save;
+        * click on each Course picture in the Course section -> page is loaded for the specific Course type, e.g. breakfast or dinner. The page displays recipes in the selected category or 'No recipes have been added yet' text;
+        * click on the facebook/instagram/twitter icons -> facebook/instagram/twitter page is opened in a separate tab.
+2. Add a New Recipe form.
+    * Expected: when user forgets to add a title to a recipe, the new recipe can't be created.
+    * Testing:
+        * leave the Recipe Name field empty and try to save the recipe -> user is asked to fill in the field and the recipe wasn't saved.
+    * Expected: user can save a recipe with a recipe name with no more than 50 characters.
+    * Testing:
+        * try to add recipe name containing more than 50 char  -> after 50th character typing is not possible.
+    * Expected: user can select any course type from the Courses dropdown.
+    * Testing:
+        * click the dropdown -> all 6 course types are visible in the dropdown;
+        * select a value from the dropdown -> the correct value is selected.
+    * Expected: user can paste/type large amount of text in Ingredients and Steps textarea.
+    * Testing:
+        * paste a long text (more than 2000 characters) -> the long text is accepted.
+    * Expected: user can set preparation time.
+    * Testing:
+        * select a half an hour or an hour as cooking time -> the correct time is set.
+    * Expected: user can cancel the recipe creation.
+    * Testing:
+        * click the Cancel button -> from Add a New Recipe form the user is redirected back the page visited earlier.
+    * Expected: user can save a new recipe successfully.
+    * Testing:
+        * fill in all required and optional fields in the form and click the Save button -> user is redirected to the All Recipes page, he can find his recipe on the page based on title.
+3. All Recipes page.
+    * Expected: the links on the page work. 
+    * Testing:
+        * test all nav item and footer links -> each link redirects to the desired page/section.
+        * preconditon: at least 1 recipe must be created:
+            * on the recipe card click the View icon -> View Recipe page is opened;
+            * on the recipe card click the Edit icon -> Edit Recipe page is opened;
+            * on the recipe card click the Delete icon -> the delete modal window for the selected recipe pops up.
+    * Expected: when many recipes were created on the page, the cards layout displays without major issues.
+    * Testing:
+        * create more than 4 recipes (for desktop) -> the recipes are displayed in 4 columns. They have the same size: height and width regardless difference in title length. Long titles are shown with ellipsis;
+        * create many recipes to check the list is scrollable -> user can scroll without issues.
+4. Edit Recipe form.
+    * Expected: 
+    * Testing:
+        * some text
+            
+
 
 ## Major bugs discovered and fixed:
 1. When triggering the delete recipe popup, for example, for the 3d recipe on the page, it showed the first recipe to remove. Fixed by passing {{ recipe._id }} into the delete popup.
