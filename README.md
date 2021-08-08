@@ -9,7 +9,7 @@
 # My Recipe Book site 
 My Recipe Book was built to demostrate my ability to design, develop and implement a back-end for a full-stack web application as well as to be able to manipulate data in non-relational database. The programming languages that were used are HTML, CSS, JavaScript and Python.
 
-![screen shots on various devices](https://github.com/AnaStasia1331/ms3-my-recipe-book/tree/master/static/img/readme/am-i-responsive.PNG)
+![screen shots on various devices](static/img/readme/am-i-responsive.PNG)
 
 # UX
 
