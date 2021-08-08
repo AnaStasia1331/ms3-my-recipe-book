@@ -22,7 +22,7 @@ They need a simple way to write down new cooking recipes in an online recipe boo
 ## How does the project fulfil the users’ needs?
 It provides an intuitive user interface for creation of new recipes. A recipe category can be assigned to a recipe that helps to search for it later, as each category lists all related recipes on a separate page. All recipes overview is also available to website users. They are able to view already existing recepies, modify and remove them.  
 
-## Wireframes (to edit)
+## Wireframes
 The [wireframes](https://github.com/AnaStasia1331/ms3-my-recipe-book/tree/master/static/img/readme/my-recipe-book-wireframes.pdf) were created using Balsamiq tool.
 
 ## User Stories 
@@ -37,9 +37,6 @@ As a website user, I want to:
 7. edit a recipe.
 8. delete a recipe.
 9. access the website from multiple devices of different sizes without major UI issues.
-
-
-## Nice-to-have features (to edit)
 
 # Technologies Used (to edit)
 
@@ -110,12 +107,12 @@ Google Chrome dev tool was used during development to make sure the website is r
 1. 
 
 ## Major bugs discovered and fixed:
-1. 
+1. When triggering the delete recipe popup, for example, for the 3d recipe on the page, it showed the first recipe to remove. Fixed by passing {{ recipe._id }} into the delete popup.
 
 ## Known bugs:
 1. 
 
-## Further Testing:
+## Further Testing (to edit):
 
 - [W3C Markup Validator](https://validator.w3.org/) was used to validate every HTML page of the project on syntax error. No issues have been detected.
 ![html validator result]()
@@ -132,14 +129,7 @@ Google Chrome dev tool was used during development to make sure the website is r
 - misconfiguration, connection issues (?)
 - testing of the README links was performed.
 
-# Deployment (to edit)
-
-## Heroku 
-I've published my website using Heroku,... To deploy a project, one should follow these steps:
-
-1. 
-
-My project is accessible via this link <>
+# Deployment
 
 ## Run the project locally
 
@@ -153,7 +143,26 @@ Steps:
 6. After executing the command, the repository will be created in the local directory.
 7. ....
 
-# Credits (to edit)
+## Heroku 
+I've published my website using Heroku. To deploy a project, one should follow these steps:
+
+1. As a prerequisite, your project must contain _requirements.txt_. Heroku uses that file to know what application and dependencies are required to run the app. To create _requirements.txt_ in the project run the command: 
+```
+pip3 freeze --local > requirements.txt
+```
+2. Next, create the _Procfile_ that specifies the commands that are executed by the app on startup. Execute the command: 
+```
+echo web: python app.py > Procfile
+```
+3. On Heroku website https://dashboard.heroku.com/apps create a new app. The app must have a unique name.
+4. In the _Deploy_ tab -> _App connected to GitHub_ section connect the Heroku app to your GitHub account.
+5. In the _Settings_ tab -> _Config Vars_ click the _Reveal Config Vars_ button. Copy and save the key-value pairs that mentioned in the _env.py_ of your project.
+6. In the _Deploy_ tab -> _Automatic deploys_ enable automatic deploys. 
+7. To open the website from Heroku, click on the _Open app_ button.
+
+My project is accessible via this link https://ms3-my-recipe-book.herokuapp.com/
+
+# Credits
 
 ## Code
 Major credits go to:
@@ -161,7 +170,7 @@ Major credits go to:
  - code examples of how to work with Flask framework provided during the 'Backend Development' course from Code Institute.
 
 ## Media
-- To make the website look coloful and attractive, several images were used from [Unsplash](https://unsplash.com/). Dark filter was applied on the top of some images with the help of [Pinetools](https://pinetools.com/darken-image)
+- To make the website look colorful and attractive, several images were used from [Unsplash](https://unsplash.com/). Dark filter was applied on the top of some images with the help of [Pinetools](https://pinetools.com/darken-image)
 - Recipe card image (chef cap) was designed in the tool [DesignEvo Free Logo Maker](https://www.designevo.com/)
 - [Flaticon](https://www.flaticon.com) allowed to create the logo.
 
