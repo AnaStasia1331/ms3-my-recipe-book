@@ -10856,16 +10856,16 @@ header.masthead .masthead-heading {
   margin-bottom: 0;
 }
 
-#cardIcons svg {
+.cardIcons svg {
   font-size: 2.63em;
   padding: 4px 7px;
 }
 
-#cardIcons a {
+.cardIcons a {
   color: #000;
 }
 
-#cardIcons a:hover {
+.cardIcons a:hover {
   color: #FFB300;
 }
 

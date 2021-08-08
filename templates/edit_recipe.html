@@ -24,7 +24,7 @@
                                 <!-- Course dropdown -->
                                 <label for="course_name">Courses</label>
                                 <select class="form-select" aria-label="Courses" id="course_name" name="course_name" required>
-                                    <option disabled>Select a course</option>
+                                    <option value="" disabled>Select a course</option>
                                     {% for course in courses %}
                                         {% if course.course_name == recipe.course_name %}
                                             <option value="{{ course.course_name }}" selected>{{ course.course_name }}</option>

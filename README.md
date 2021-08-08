@@ -115,7 +115,6 @@ Google Chrome dev tool was used during development to make sure the website is r
 ## Further Testing (to edit):
 
 - [W3C Markup Validator](https://validator.w3.org/) was used to validate every HTML page of the project on syntax error. No issues have been detected.
-![html validator result]()
 - [Jigsaw](https://jigsaw.w3.org/css-validator/) service was used to validate css files. No validation errors have been detected.
 ![css validator result]()
 - Run the JS files through [Jshint](https://jshint.com/) linter, there are warnings but no major issues.
