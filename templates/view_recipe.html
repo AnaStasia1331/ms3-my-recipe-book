@@ -17,12 +17,12 @@
                         <fieldset disabled>
                             <div class="form-group">
                                 <!-- Name input-->
-                                <label for="recipe_name">Recipe Name</label>
+                                <label for="recipe_name">Recipe Name*</label>
                                 <input class="form-control" value="{{ recipe.recipe_name }}" id="recipe_name" name="recipe_name" type="text" maxlength="50" required/>
                             </div>
                             <div class="form-group">
                                 <!-- Course dropdown -->
-                                <label for="course_name">Courses</label>
+                                <label for="course_name">Courses*</label>
                                 <select class="form-select" aria-label="Courses" id="course_name" name="course_name" size="1" required>
                                     <option value="">{{ recipe.course_name }}</option>
                                 </select>
