@@ -12,7 +12,9 @@
                 {% for recipe in recipes %}
                     <div class="col-lg-3 col-sm-6 mb-4">
                         <div class="card">
-                            <img src="../static/img/chef-cap.png" class="card-img-top" alt="standard recipe image">
+                            <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}#recipeForm">
+                                <img src="../static/img/chef-cap.png" class="card-img-top" alt="standard recipe image">
+                            </a>
                             <div class="card-body text-center">
                                 <h5 class="card-title text-truncate">{{ recipe.recipe_name }}</h5>
                                 <hr>
