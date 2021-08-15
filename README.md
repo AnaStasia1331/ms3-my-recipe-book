@@ -29,7 +29,7 @@ The [wireframes](https://github.com/AnaStasia1331/ms3-my-recipe-book/tree/master
 As a website user, I want to:
 
 1. be able to create a new recipe.
-2. be able to find an existing recipe based on category/group it belongs to.
+2. be able to find an existing recipe based on the category/group it belongs to.
 3. be able to access all recipes in a single place.
 4. view the details of an existing recipe.
 5. edit a recipe.
@@ -41,65 +41,42 @@ As a website user, I want to:
 1. Login functionality.
 2. Image upload for a specific recipe.
 
-# Technologies Used (to edit)
+# Database Schema 
+
+# Technologies Used
 
 The below list includes all of the languages, frameworks, tools, learning platforms and stock image websites I have used to create this project. 
-## Languages Used
 - [HTML](https://en.wikipedia.org/wiki/HTML5)
 - [CSS](https://en.wikipedia.org/wiki/CSS)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-## Frameworks
-- [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
-    - used Bootstrap components to design the responsive website faster.
-- [JQuery 3.6.0](https://jquery.com/)
-    -  a JavaScript library that simplifies JavaScript programming.
-- [Flask]()
-## Exteral APIs
-## Database
-- [MongoDb]()
-## IDE and VCS
+- [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) 
+    - imported a free bootstrap theme ['Agency'](https://startbootstrap.com/theme/agency)
+- [Python](https://www.python.org/downloads/release/python-3811/)
+    - [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+    - [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
+- [Heroku](https://dashboard.heroku.com/apps)
+- [MongoDb](https://www.mongodb.com/)
 - [Git](https://git-scm.com/)
-    - used as a version control system.
 - [GitHub](https://github.com/)
-    - used as a web-based platform to store and share the project.
 - [Gitpod](https://www.gitpod.io/)
-    - used as a cloud-based integrated developer environment.
-## Font, wireframes and media
 - [Unsplash](https://unsplash.com/)
-    - downloaded the images for header background and courses cards
 - [DesignEvo Free Logo Maker](https://www.designevo.com/)
-    - for creation of the standard image for recipe card.
 - [Flaticon](https://www.flaticon.com) 
-    - for logo creation.
 - [Pinetools](https://pinetools.com/darken-image)
-    - allowed to apply filters on images.
 - [Google fonts](https://fonts.google.com/specimen/Quicksand)
-    - used to import 'Quicksand' font.
+- [Fontawesome](https://fontawesome.com/)
 - [Balsamiq](https://balsamiq.com/wireframes/)
-    - used for creation of wireframes.
 - [ColorPick Eyedropper](https://chrome.google.com/webstore/detail/colorpick-eyedropper/ohcpnigalekghcmgcdcenkpelffpdolg)
-    - a Chrome plugin that was used to choose a desired color code.
-## Debugging 
 - [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools)
-    - modify CSS on-the-fly, test responsiveness, simulate slow network for testing the page loader; 'Console' and 'Sources' tab were helpful in debugging JS code.
-## Knowledge sources 
 - [Code Institute learning platform](https://codeinstitute.net/)
-    - used to revise the theory of JavaScript Essentials and Interective Frontend Development modules, find solutions for JS/JQuery issues.
 - [W3schools](https://www.w3schools.com/)
-    - used to revise the theory of CSS/JS/JQuery and find solutions for code issues.
 - [Stack Overflow](https://stackoverflow.com/)
-    - used to find answers to challenging coding questions.
-## Code Validators
 - [JavaScript validator](https://jshint.com/)
-    -  a static code analysis tool used for checking if JavaScript source code complies with coding rules.
 - [Jigsaw](https://jigsaw.w3.org/css-validator/validator)
-    - tool for css validation.
 - [W3C validator](https://validator.w3.org/)
-    - tool for html validation.
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse)
-    - tool for perfomance, accessibility validation.
+- [Python formatter](http://pep8online.com/)
 
-# Testing (to edit)
+# Testing
 
 ## Test environments
 Google Chrome dev tool was used during development to make sure the website is responsiveness. The final testing of the deployed site was performed on the devices:
@@ -123,6 +100,9 @@ Google Chrome dev tool was used during development to make sure the website is r
     * Expected: when user forgets to add a title to a recipe, the new recipe can't be created.
     * Testing:
         * leave the Recipe Name field empty and try to save the recipe -> user is asked to fill in the field and the recipe wasn't saved.
+    * Expected: when user forgets to select a course from the dropdown, the new recipe can't be created.
+    * Testing:
+        * fill in the Recipe Name, but leave the default text selected in the Couse dropdown and try to save the recipe -> user is asked to select a course and the recipe wasn't saved.
     * Expected: user can save a recipe with a recipe name with no more than 50 characters.
     * Testing:
         * try to add recipe name containing more than 50 char  -> after 50th character typing is not possible.
@@ -211,21 +191,22 @@ Google Chrome dev tool was used during development to make sure the website is r
 1. When triggering the delete recipe popup, for example, for the 3d recipe on the page, it showed the first recipe to remove. Fixed by passing {{ recipe._id }} into the delete popup.
 
 ## Known bugs:
-1. 
+1. On very big screen, the footer can display large width.
 
 ## Further Testing (to edit):
 
 - [W3C Markup Validator](https://validator.w3.org/) was used to validate every HTML page of the project on syntax error. No issues have been detected.
+
 - [Jigsaw](https://jigsaw.w3.org/css-validator/) service was used to validate css files. No validation errors have been detected.
-![css validator result]()
+
 - Run the JS files through [Jshint](https://jshint.com/) linter, there are warnings but no major issues.
-- Python validator http://pep8online.com/ 
-- Lighthouse tool was used to audit performance, accessibility, best practice and SEO.
+- [Python validator](http://pep8online.com/) warned about lines being too long.
+- Dev tool in Google Chrome was used to check on console errors. 2 errors was fixed by removing the unused js code.
 - testing of the README links was performed.
 
 # Deployment
 
-## Run the project locally
+## Run the project locally (to edit)
 
 Steps:
 
