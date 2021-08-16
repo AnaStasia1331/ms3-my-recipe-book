@@ -199,12 +199,10 @@ Google Chrome dev tool was used during development to make sure the website is r
 ## Known bugs:
 1. On very big screen, the footer can display large width.
 
-## Further Testing (to edit):
+## Further Testing:
 
 - [W3C Markup Validator](https://validator.w3.org/) was used to validate every HTML page of the project on syntax error. No issues have been detected.
-
-- [Jigsaw](https://jigsaw.w3.org/css-validator/) service was used to validate css files. No validation errors have been detected.
-
+- [Jigsaw](https://jigsaw.w3.org/css-validator/) service was used to validate css files. There are warnings, but no validation errors are present.
 - Run the JS files through [Jshint](https://jshint.com/) linter, there are warnings but no major issues.
 - [Python validator](http://pep8online.com/) warned about lines being too long.
 - Dev tool in Google Chrome was used to check on console errors. 2 errors was fixed by removing the unused js code.
