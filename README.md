@@ -212,9 +212,7 @@ Google Chrome dev tool was used during development to make sure the website is r
 
 # Deployment
 
-## Run the project locally (to edit)
-
-Steps:
+## Run the project locally
 
 1. Open the repository in GitHub https://github.com/AnaStasia1331/ms3-my-recipe-book.
 2. Find the Code button, choose the HTTPS clone option, copy the command.
@@ -222,7 +220,26 @@ Steps:
 4. Open the Git Bash terminal in that directory.
 5. Type the command 'git clone' plus the copied https url. 
 6. After executing the command, the repository will be created in the local directory.
-7. ....
+7. Make sure python is installed on your PC https://www.python.org/downloads/ and IDE has python extension.
+8. Open the cloned project in your IDE, from the terminal install the dependencies listed in *requirements.txt*:
+- for Windows:
+```
+python -m pip install -r requirements.txt
+```
+- for Linux:    
+```
+pip3 install -r requirements.txt
+```
+9. Make an account on [MongoDb](https://mongodb.com/) and create the collections reflected in [Database Schema section](#database-schema).
+10. Now switch back to IDE and create *env.py* file in the root directory. In the *env.py* type `import os`, then add enviroment variables taken from MongoDb:
+```
+os.environ.setdefault("MONGO_URI", "mongodb+srv://<connection string >")
+os.environ.setdefault("MONGO_DBNAME", "<db name>")
+```
+11. To run the application use the command:
+```
+python app.py
+```
 
 ## Heroku 
 I've published my website using Heroku. To deploy a project, one should follow these steps:
