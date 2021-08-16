@@ -1,6 +1,7 @@
 ## Contents
 - [My Recipe Book site](#my-recipe-book-site)
 - [UX](#ux)
+- [Database Schema](#database-schema)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
 - [Deployment](#deployment)
@@ -42,6 +43,11 @@ As a website user, I want to:
 2. Image upload for a specific recipe.
 
 # Database Schema 
+
+MongoDB was used for storing data for the project.
+
+The database schema:
+![Schema](https://github.com/AnaStasia1331/ms3-my-recipe-book/tree/master/static/img/readme/database-schema.PNG)
 
 # Technologies Used
 
