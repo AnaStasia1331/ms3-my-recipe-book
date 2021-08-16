@@ -247,7 +247,7 @@ My project is accessible via this link https://ms3-my-recipe-book.herokuapp.com/
 
 ## Code
 Major credits go to:
- - [Bootstrap free theme 'Agency'](https://startbootstrap.com/theme/agency) was imported into the project with predefined HTML, CSS and JS files. The theme was significantly modified for the needs of the project.
+ - [Bootstrap free theme 'Agency'](https://startbootstrap.com/theme/agency) was imported into the project with written HTML, CSS and JS files. The theme was significantly modified for the needs of the project.
  - code examples of how to work with Flask framework provided during the 'Backend Development' course from Code Institute.
 
 ## Media
