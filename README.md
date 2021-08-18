@@ -202,7 +202,7 @@ Google Chrome dev tool was used during development to make sure the website is r
 ## Further Testing:
 
 - [W3C Markup Validator](https://validator.w3.org/) was used to validate every HTML page of the project on syntax error. No issues have been detected.
-- [Jigsaw](https://jigsaw.w3.org/css-validator/) service was used to validate css files. There are warnings, but no validation errors are present.
+- [Jigsaw](https://jigsaw.w3.org/css-validator/) service was used to validate css files. There are some warnings, 1 type of error known as an open defect https://github.com/w3c/css-validator/issues/305 in the validator
 - Run the JS files through [Jshint](https://jshint.com/) linter, there are warnings but no major issues.
 - [Python validator](http://pep8online.com/) warned about lines being too long.
 - Dev tool in Google Chrome was used to check on console errors. 2 errors was fixed by removing the unused js code.
